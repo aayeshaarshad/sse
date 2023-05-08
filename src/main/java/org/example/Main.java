@@ -10,14 +10,14 @@ import java.util.concurrent.TimeUnit;
 public class Main {
     public static void main(String[] args) {
 
-        String url = "http://localhost:8080/sytflix";
+        String url = "http://localhost:8080/";
         List<String> events = new LinkedList<>();
 
         SSEClient sseClient = SSEClient.builder()
                             .url(url)
                             .eventHandler(eventText -> events.add(eventText))
-                            .username("sytac")
-                            .password("4p9g-Dv7T-u8fe-iz6y-SRW2")
+                            .username("")
+                            .password("")
                             .build();
 
         sseClient.start();
